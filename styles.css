@@ -1,48 +1,70 @@
 body {
     font-family: Arial, sans-serif;
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
 }
 
-#quiz-container {
-    max-width: 600px;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+#calculator-container {
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 300px;
 }
 
-#quiz-question {
-    font-size: 20px;
-    margin-bottom: 20px;
+input[type="number"] {
+    margin: 10px;
+    padding: 15px;
+    width: 200px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
 }
 
-input[type="radio"] {
-    margin-right: 10px;
+input[type="number"]:focus {
+    outline: none;
+    border-color: #007bff;
 }
 
-label {
-    margin-right: 30px;
+button {
+    padding: 15px 25px;
+    margin: 8px;
+    font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
-}
-
-#submit-answer {
-    display: block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease;
+    min-width: 60px;
 }
 
-#submit-answer:hover {
+button:hover {
     background-color: #0056b3;
 }
 
-#feedback {
-    margin-top: 20px;
-    font-size: 18px;
+button:active {
+    transform: translateY(1px);
+}
+
+#result {
+    margin-top: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    border: 2px solid #e9ecef;
+}
+
+#calculation-result {
+    color: #007bff;
 }
